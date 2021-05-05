@@ -53,7 +53,12 @@ const findEditThenSave = (personId, done) => {
 
 const findAndUpdate = (personName, done) => {
   const ageToSet = 20;
-  Person.findOneAndUpdate(personName, { age: ageToSet }, { new: true }, done);
+  Person.findOneAndUpdate(
+    { name: personName },
+    { age: ageToSet },
+    { new: true },
+    done
+  );
 };
 
 const removeById = (personId, done) => {
