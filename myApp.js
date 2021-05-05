@@ -33,7 +33,7 @@ const findPeopleByName = (personName, done) => {
 };
 
 const findOneByFood = (food, done) => {
-  Person.findOne({ favoriteFood: [food] }, null, done);
+  Person.findOne({ favoriteFoods: food }, done);
 };
 
 const findPersonById = (personId, done) => {
